@@ -449,6 +449,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				YANDEX_APP_ID = "yx{Client id of you application}";
 			};
 			name = Debug;
 		};
@@ -470,6 +471,7 @@
 				PRODUCT_NAME = example;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				YANDEX_APP_ID = "yx{Client id of you application}";
 			};
 			name = Release;
 		};
