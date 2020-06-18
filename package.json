@@ -1,0 +1,39 @@
+{
+  "name": "react-native-yandex-login",
+  "title": "React Native Yandex Login SDK",
+  "version": "0.0.1",
+  "description": "YandexLoginSDK for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no tests to run\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanyasem/react-native-yandex-login.git",
+    "baseUrl": "https://github.com/vanyasem/react-native-yandex-login"
+  },
+  "keywords": [
+    "react-native",
+    "login",
+    "yandex",
+    "ya",
+    "sdk"
+  ],
+  "author": {
+    "name": "Ivan Semkin",
+    "email": "ivan@semkin.ru"
+  },
+  "bugs": {
+    "url": "https://github.com/vanyasem/react-native-yandex-login/issues"
+  },
+  "homepage": "https://github.com/vanyasem/react-native-yandex-login#readme",
+  "license": "Apache-2.0",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  },
+  "devDependencies": {
+    "react-native": ">=0.60.0"
+  }
+}
