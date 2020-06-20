@@ -6,6 +6,11 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		683EFA41249CA78500634C74 /* YandexLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683EFA40249CA78500634C74 /* YandexLogin.swift */; };
+		683EFA44249CA7FE00634C74 /* YandexLoginBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 683EFA43249CA7FE00634C74 /* YandexLoginBridge.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libYandexLogin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYandexLogin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		683EFA40249CA78500634C74 /* YandexLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexLogin.swift; sourceTree = "<group>"; };
+		683EFA42249CA7C200634C74 /* YandexLogin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YandexLogin-Bridging-Header.h"; sourceTree = "<group>"; };
+		683EFA43249CA7FE00634C74 /* YandexLoginBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YandexLoginBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,9 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				683EFA43249CA7FE00634C74 /* YandexLoginBridge.m */,
+				683EFA42249CA7C200634C74 /* YandexLogin-Bridging-Header.h */,
+				683EFA40249CA78500634C74 /* YandexLogin.swift */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +116,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				683EFA41249CA78500634C74 /* YandexLogin.swift in Sources */,
+				683EFA44249CA7FE00634C74 /* YandexLoginBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +248,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = YandexLogin;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "YandexLogin-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -251,6 +266,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = YandexLogin;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "YandexLogin-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

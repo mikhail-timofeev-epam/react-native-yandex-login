@@ -9,7 +9,7 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import YandexLogin from 'react-native-yandex-login';
 
 export default class App extends Component<{}> {
@@ -18,12 +18,13 @@ export default class App extends Component<{}> {
     message: '--'
   };
   componentDidMount() {
-    YandexLogin.sampleMethod('Testing', 123, (message) => {
+    
+    /*YandexLogin.sampleMethod('timeToStartCheckout', 123, (message) => {
       this.setState({
         status: 'native callback received',
         message
       });
-    });
+    });*/
   }
   render() {
     return (
@@ -32,6 +33,11 @@ export default class App extends Component<{}> {
         <Text style={styles.instructions}>STATUS: {this.state.status}</Text>
         <Text style={styles.welcome}>☆NATIVE CALLBACK MESSAGE☆</Text>
         <Text style={styles.instructions}>{this.state.message}</Text>
+        <Button
+          title="Launch Yandex.Login"
+          color="#f194ff"
+          onPress={() => YandexLogin.timeToStartCheckout(true)}
+        />
       </View>
     );
   }
