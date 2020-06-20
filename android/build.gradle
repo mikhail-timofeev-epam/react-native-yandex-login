@@ -67,12 +67,14 @@ repositories {
         url "$rootDir/../node_modules/jsc-android/dist"
     }
     google()
+    mavenCentral()
     jcenter()
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+    implementation 'com.yandex.android:authsdk:2.1.0'
 }
 
 def configureReactNativePom(def pom) {
