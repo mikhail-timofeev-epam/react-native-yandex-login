@@ -8,17 +8,16 @@
  * https://github.com/facebook/react-native
  */
 
-import React, { Component } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import React, {Component} from 'react';
+import {Button, StyleSheet, Text, View} from 'react-native';
 import YandexLogin from 'react-native-yandex-login';
 
 export default class App extends Component<{}> {
   state = {
     status: 'starting',
-    message: '--'
+    message: '--',
   };
   componentDidMount() {
-    
     /*YandexLogin.sampleMethod('timeToStartCheckout', 123, (message) => {
       this.setState({
         status: 'native callback received',
