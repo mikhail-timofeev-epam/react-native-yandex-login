@@ -12,18 +12,13 @@ import React, {Component} from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
 import YandexLogin from 'react-native-yandex-login';
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   state = {
     status: 'starting',
     message: '--',
   };
   componentDidMount() {
-    /*YandexLogin.sampleMethod('timeToStartCheckout', 123, (message) => {
-      this.setState({
-        status: 'native callback received',
-        message
-      });
-    });*/
+    YandexLogin.activate('57a8133c69d947388a67164dfdbc46d3');
   }
   render() {
     return (
@@ -35,7 +30,7 @@ export default class App extends Component<{}> {
         <Button
           title="Launch Yandex.Login"
           color="#f194ff"
-          onPress={() => YandexLogin.timeToStartCheckout(true)}
+          onPress={() => YandexLogin.timeToStartCheckout('').then(console.log)}
         />
       </View>
     );

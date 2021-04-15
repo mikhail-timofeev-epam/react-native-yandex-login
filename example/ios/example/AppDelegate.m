@@ -3,6 +3,7 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import "YandexLogin-Swift.h"
 
 #if DEBUG
 #import <FlipperKit/FlipperClient.h>
@@ -30,7 +31,7 @@ static void InitializeFlipper(UIApplication *application) {
 #if DEBUG
   InitializeFlipper(application);
 #endif
-
+  
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"example"
@@ -55,4 +56,9 @@ static void InitializeFlipper(UIApplication *application) {
 #endif
 }
 
+
+- (BOOL) application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+  YandexSignInBridge *t = [YandexSignInBridge new];
+  return [t handleOpenWithUrl:url id: options[UIApplicationOpenURLOptionsSourceApplicationKey]];
+}
 @end

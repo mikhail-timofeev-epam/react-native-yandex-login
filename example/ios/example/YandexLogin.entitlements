@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:yx{client id}.oauth.yandex.ru</string>
+		<string>applinks:yx57a8133c69d947388a67164dfdbc46d3.oauth.yandex.ru</string>
 	</array>
 </dict>
 </plist>

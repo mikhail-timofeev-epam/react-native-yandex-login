@@ -27,7 +27,7 @@
 			<string>YandexLoginSDK</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>${YANDEX_APP_ID}</string>
+				<string>yx57a8133c69d947388a67164dfdbc46d3</string>
 			</array>
 		</dict>
 	</array>

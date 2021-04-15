@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		30FF83B9C81AED15BD9B2F6D /* libPods-example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E5E6493943DA03D1ACEF01 /* libPods-example.a */; };
+		584C925A26285A3D00297B85 /* YandexSignInBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584C925926285A3D00297B85 /* YandexSignInBridge.swift */; };
 		97AD3E4EA00C13B8254B225B /* libPods-example-exampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8E0E58E967424EC06A63E3 /* libPods-example-exampleTests.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 		2A8E88D8B2FA18EE8CA55038 /* Pods-example-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-example-tvOS/Pods-example-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		451A2D4DA1E6686EDFAA7ECE /* libPods-example-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-example-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45763C055716B9C098F76682 /* libPods-example-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-example-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		584C925826285A3D00297B85 /* example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "example-Bridging-Header.h"; sourceTree = "<group>"; };
+		584C925926285A3D00297B85 /* YandexSignInBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexSignInBridge.swift; sourceTree = "<group>"; };
 		5AB78F3C1FDCC0AAA2392DED /* Pods-example-exampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example-exampleTests.release.xcconfig"; path = "Target Support Files/Pods-example-exampleTests/Pods-example-exampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		683EFA39249B797F00634C74 /* YandexLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = YandexLogin.entitlements; path = example/YandexLogin.entitlements; sourceTree = "<group>"; };
 		85B2C0C2974345BF933ED8A8 /* Pods-example-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-example-tvOSTests/Pods-example-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				584C925926285A3D00297B85 /* YandexSignInBridge.swift */,
+				584C925826285A3D00297B85 /* example-Bridging-Header.h */,
 			);
 			name = example;
 			sourceTree = "<group>";
@@ -221,7 +226,8 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						DevelopmentTeam = 3L44N5P54U;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -357,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				584C925A26285A3D00297B85 /* YandexSignInBridge.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9830F20F35BC69B0874E0A6 /* Pods-example-exampleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -411,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB78F3C1FDCC0AAA2392DED /* Pods-example-exampleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = exampleTests/Info.plist;
@@ -435,6 +444,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = example/YandexLogin.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3L44N5P54U;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -447,12 +457,12 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.semkin.yandexlogin;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.semkin.yandexlogin.timofeev;
 				PRODUCT_NAME = YandexLogin;
+				SWIFT_OBJC_BRIDGING_HEADER = "example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
-				YANDEX_APP_ID = "yx{Client id of you application}";
 			};
 			name = Debug;
 		};
@@ -464,6 +474,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = example/YandexLogin.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3L44N5P54U;
 				INFOPLIST_FILE = example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -471,11 +482,11 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.semkin.yandexlogin;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.semkin.yandexlogin.timofeev;
 				PRODUCT_NAME = YandexLogin;
+				SWIFT_OBJC_BRIDGING_HEADER = "example-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
-				YANDEX_APP_ID = "yx{Client id of you application}";
 			};
 			name = Release;
 		};
