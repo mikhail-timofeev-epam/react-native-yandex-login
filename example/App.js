@@ -30,7 +30,11 @@ export default class App extends Component {
         <Button
           title="Launch Yandex.Login"
           color="#f194ff"
-          onPress={() => YandexLogin.timeToStartCheckout('').then(console.log)}
+          onPress={() =>
+            YandexLogin.timeToStartCheckout('').then((data) => {
+              console.log({data: data});
+            })
+          }
         />
       </View>
     );

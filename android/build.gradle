@@ -74,7 +74,8 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-    implementation 'com.yandex.android:authsdk:2.1.0'
+    implementation "com.yandex.android:authsdk:2.3.0"
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.32'
 }
 
 def configureReactNativePom(def pom) {
