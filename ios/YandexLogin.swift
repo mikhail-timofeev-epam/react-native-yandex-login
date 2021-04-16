@@ -18,7 +18,9 @@ class YandexLogin: NSObject, YXLObserver {
         self.storedRejecter = rejecter
         
         YXLSdk.shared.add(observer: self)
-        YXLSdk.shared.authorize()
+        DispatchQueue.main.async {
+            YXLSdk.shared.authorize()
+        }
     }
     
     @objc(activate:)
