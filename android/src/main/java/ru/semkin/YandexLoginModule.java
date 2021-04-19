@@ -19,6 +19,8 @@ import com.yandex.authsdk.YandexAuthOptions;
 import com.yandex.authsdk.YandexAuthSdk;
 import com.yandex.authsdk.YandexAuthToken;
 
+import java.lang.reflect.Field;
+
 public class YandexLoginModule extends ReactContextBaseJavaModule {
 
     private final String FAILED_TO_ACTIVATE = "FAILED_TO_ACTIVATE";
@@ -101,6 +103,17 @@ public class YandexLoginModule extends ReactContextBaseJavaModule {
     public void activate(String id) {
         YandexAuthOptions options = new YandexAuthOptions.Builder(reactContext)
                 .build();
-        sdk = new YandexAuthSdk(reactContext, options);
+
+        Field field = null;
+        try {
+            field = options.getClass()
+                    .getDeclaredField("clientId");
+            field.setAccessible(true);
+            field.set(options, id);
+
+            sdk = new YandexAuthSdk(reactContext, options);
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
