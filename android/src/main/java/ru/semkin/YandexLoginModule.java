@@ -59,9 +59,10 @@ public class YandexLoginModule extends ReactContextBaseJavaModule {
                                     WritableNativeArray array = new WritableNativeArray();
                                     array.pushString(yandexAuthToken.getValue());
                                     array.pushString(sdk.getJwt(yandexAuthToken));
-
-                                    savedPromise.resolve(array);
-                                    savedPromise = null;
+                                    if (savedPromise != null) {
+                                        savedPromise.resolve(array);
+                                        savedPromise = null;
+                                    }
                                 } catch (YandexAuthException e) {
                                     if (savedPromise != null) {
                                         savedPromise.reject(e);
